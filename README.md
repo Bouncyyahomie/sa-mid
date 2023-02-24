@@ -8,8 +8,14 @@ docker login -u "[username]" -p "[password]"
 
 - สร้าง repo ใน [docker hub](https://hub.docker.com/)
 
+build Dockerfile with tag
 ```bash
-docker tag [ชื่อ image] [ชื่อ repo ใน docker hub]:latest
+docker build -t <username>/<image name> --file Dockerfile .
+
+```
+
+```bash
+docker tag [ชื่อ image] [ชื่อ repo ใน docker hub]:latest 
 docker push [ชื่อ repo ใน docker hub]:latest
 ```
 
